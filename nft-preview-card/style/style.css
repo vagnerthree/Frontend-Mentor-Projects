@@ -1,0 +1,129 @@
+:root{
+    --Softblue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Verydarkbluebg: hsl(217, 54%, 11%);
+    --VerydarkblueCard:hsl(216, 50%, 16%);
+    --Verydark: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+}
+
+*{
+    margin: 0;
+    font-family: Outfit, sans-serif;
+}
+
+body{
+    background-color: var(--Verydarkbluebg);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    max-width: 375px;
+    background-color: var(--VerydarkblueCard);
+    max-height: 90%;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+.image{
+    position: relative;
+    margin-bottom: 20px;
+}
+
+img[alt="image"]{
+    width: 100%;
+    border-radius: 15px;
+    
+}
+
+.image-card{
+    opacity: 0%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: hsl(178, 100%, 50%, 50%); /*--Cyan*/
+    width: 100%;
+    border-radius: 15px;
+    height: 99%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+img[alt="view"]{
+    height: 15%;
+    width: 15%; 
+}
+
+.card h2{
+    color: var(--White);
+    margin-bottom: 15px;
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.card p{
+    color: var(--Softblue);
+    width: 80%;
+    line-height: 25px
+}
+
+.itens{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 2px solid var(--Verydark);
+    margin-top: 10px;
+    color: var(--Softblue);
+}
+
+.itens strong{
+    color: var(--Cyan);
+}
+
+.itens strong::before{
+    content: url(../images/icon-ethereum.svg);
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.itens span::before{
+    content: url(../images/icon-clock.svg);
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.author{
+    display: flex;
+    align-items: center;
+    color: var(--Softblue);
+    padding: 15px 0;
+}
+
+.author img[alt="avatar"]{
+    width: 35px;
+    border-radius: 50%;
+    border: 1px solid var(--White);
+    margin-right: 15px;
+}
+
+.author span{
+    color: var(--White);
+    cursor: pointer;
+    transition: .3s ease;
+}
+
+.image:hover .image-card{
+    opacity: 100%;
+}
+.card h2:hover{
+    color: var(--Cyan);
+}
+.author span:hover{
+    color: var(--Cyan);
+}

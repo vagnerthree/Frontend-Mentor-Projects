@@ -1,0 +1,141 @@
+:root{
+    --PaleBlue: hsl(225, 100%, 94%);
+    --BrightBlue: hsl(245, 75%, 52%);
+    --VeryPaleBlue: hsl(225, 100%, 98%);
+    --DesaturatedBlue: hsl(224, 23%, 55%);
+    --DarkBlue: hsl(223, 47%, 23%);
+}
+
+body{
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-image: url(../images/pattern-background-mobile.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-color: var(--PaleBlue);
+    align-items: center;
+    font-family: 'Red Hat Display', sans-serif;
+}
+
+.content{
+    max-width: 375px;
+    border-radius: 20px;
+    background-color: #FFF;
+    box-shadow: 0 3px 15px -6px gray;
+}
+
+img[alt="illustration"]{
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.content h2{
+    color: var(--DarkBlue);
+    text-align: center;
+    font-weight: 900;
+}
+
+.content p{
+    color: var(--DesaturatedBlue);
+    font-weight: 700;
+    line-height: 1.7rem;
+    padding: 0 20px;
+    margin-bottom: 20px;
+}
+
+
+main{
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.plan{
+    background-color: var(--VeryPaleBlue);   
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 20px;
+}
+
+.plan a{
+    transition: 0.4s;
+    align-self: center;
+    font-weight: 700;
+    
+}
+
+.value{
+   display: grid;
+   grid-template-areas: "image um"
+                        "image dois";
+ 
+}
+
+.value strong{
+    grid-area: um;
+    color: var(--DarkBlue);
+    font-weight: 900;
+}
+
+.value span{
+    grid-area: dois;
+    color: var(--DesaturatedBlue);
+}
+
+.value::before{
+    content: url(../images/icon-music.svg);
+    grid-area: image;
+    margin-right: 17px;
+}
+
+.content #pay{
+    transition: 0.4s;
+    background-color: var(--BrightBlue);
+    color: #FFF;
+    width: 100%;
+    padding: 20px 0;
+    margin-top: 20px;
+    border: none;
+    border-radius: 15px;
+    font-weight: 700;
+    font-size: 1.05em;
+    box-shadow: 0 10px 30px -6px gray;
+    cursor: pointer;
+}
+
+.content #cancel{
+    transition: 0.4s;
+    border: none;
+    background-color: unset;
+    color: var(--DesaturatedBlue);
+    font-weight: 700;
+    margin: 15px 0;
+    cursor: pointer;
+    width: 100%;
+    padding: 20px 0;
+    font-size: 1.1rem;
+}
+
+.content #pay:hover{
+    opacity: 0.7;
+}
+
+.content #cancel:hover{
+    color: var(--DarkBlue);
+}
+
+.plan a:hover{
+    text-decoration: none;
+    color: var(--DesaturatedBlue);
+}
+
+@media only screen and (min-width: 1024px) {
+    body {
+      background-image: url(../images/pattern-background-desktop.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+}
